@@ -12,6 +12,19 @@
 -->
 <script type="text/x-red" data-template-name="app-metrics">
     <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-globe"></i> Url</label>
+        <input type="text" id="node-input-url" placeholder="Url">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-hashtag"></i> Port</label>
+        <input type="number" id="node-input-port" min="0" max="65535">
+    </div>
+    <div class="form-row">
+        <label for="node-input-title"><i class="fa fa-globe"></i> Title</label>
+        <input type="text" id="node-input-title" placeholder="Title">
+    </div>
+    </br>
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
@@ -20,9 +33,12 @@
 <script type="text/javascript">
     RED.nodes.registerType('app-metrics', {
         category: 'performance',
-        color:    'rgb(231, 231, 174)',
+        color: 'rgb(231, 231, 174)',
         defaults: {
-            name: {value: ""}
+            name: {value: ""},
+            url: {value: "/appmetrics-dash"},
+            port: : {value: 3001},
+            title: : {value: "Node-RED metrics"},
         },
         inputs: 1,
         outputs: 1,
@@ -35,4 +51,10 @@
 
 <script type="text/x-red" data-help-name="app-metrics">
     <p>A Node Red node to monitor and display Node.js application data.</p>
+    <p><strong>Url:</strong><br/>
+    The path where the metrics dashboard will be served.</p>
+    <p><strong>Port:</strong><br/>
+    The port where the metrics dashboard will be served.</p>
+    <p><strong>Title:</strong><br/>
+    The title of the the metrics dashboard.</p>
 </script>
