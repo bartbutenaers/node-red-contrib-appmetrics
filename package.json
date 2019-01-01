@@ -1,0 +1,26 @@
+{
+    "name"         : "node-red-contrib-appmetrics",
+    "version"      : "0.1.0",
+    "description"  : "A Node Red node to monitor and display Node.js application data",
+    "dependencies": {
+       "appmetrics-dash": "4.0.0"
+    },
+    "author": {
+        "name": "Bart Butenaers"
+    },
+    "license": "Apache-2.0",
+    "keywords": [ "node-red", "metrics", "nodejs", "cpu", "profiling", "http", "request", "throughput", "response time", "memory", "heap", "event loop" ],
+    "bugs": {
+        "url": "https://github.com/bartbutenaers/node-red-contrib-appmetrics/issues"
+    },
+    "homepage": "https://github.com/bartbutenaers/node-red-contrib-appmetrics",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bartbutenaers/node-red-contrib-appmetrics.git"
+    },
+    "node-red"     : {
+        "nodes": {
+            "app-metrics": "app_metrics.js"
+        }
+    }
+}
